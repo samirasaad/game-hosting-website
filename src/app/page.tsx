@@ -1,6 +1,7 @@
 import GameCard from "@/Components/GameCard/GameCard";
-import { Games } from "@/data/games";
-import { Game } from "@/Types/Game";
+import { games } from "@/data/games";
+import { Game } from "@/types/game";
+
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
       <h1 className="text-3xl font-bold mb-4">All Games</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {Games.map((game: Game) => (
+        {games.map((game: Game) => (
           <GameCard key={game.id} game={game} />
         ))}
       </div>

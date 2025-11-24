@@ -1,6 +1,6 @@
 // lib/gameData.js or .ts (Add these to your existing MOCK_GAMES array)
 
-export const Games = [
+export const games = [
   {
     id: "2dee9d404697435aa76111eb4015e1d5",
     title: "Merge Fruit",

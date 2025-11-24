@@ -34,10 +34,10 @@ function FeaturedGamesCarousel({ slides }: { slides: Game[] }) {
       responsive={responsive}
       infinite={true}
       autoPlay={true}
-      autoPlaySpeed={2500}
+      autoPlaySpeed={3000}
       keyBoardControl={true}
-      customTransition="transform 1.5s cubic-bezier(0.77, 0, 0.175, 1)"
-      transitionDuration={1500}
+      customTransition="transform 2s cubic-bezier(0.57, 0, 0.2, 1)"
+      transitionDuration={1800}
       containerClass="carousel-container mb-2 pb-10"
       removeArrowOnDeviceType={[]}
       dotListClass="custom-dot-list-style"

@@ -5,4 +5,5 @@ export interface Game {
   iframeUrl:string;
   shortDescription?: string;
   genre: string;
+  isFeatured:boolean
 }

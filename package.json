@@ -11,7 +11,9 @@
   "dependencies": {
     "next": "16.0.3",
     "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "react-dom": "19.2.0",
+    "react-multi-carousel": "^2.8.6",
+    "reactjs-nextjs-carousel": "^0.0.7"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

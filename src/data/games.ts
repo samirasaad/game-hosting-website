@@ -1,12 +1,9 @@
-// lib/gameData.js or .ts (Add these to your existing MOCK_GAMES array)
-
 export const games = [
   {
     id: "2dee9d404697435aa76111eb4015e1d5",
     title: "Merge Fruit",
-    shortDescription:'',
-    thumbnailUrl:
-      "/games/game.jpg",
+    shortDescription: "",
+    thumbnailUrl: "/games/game.jpg",
     iframeUrl:
       "https://html5.gamedistribution.com/2dee9d404697435aa76111eb4015e1d5/",
     genre: "Puzzle",
@@ -73,7 +70,6 @@ export const games = [
     genre: "Arcade",
     isFeatured: true,
   },
-
   {
     id: "b821577113cd4219a1c7ce9eab890a35",
     title: "Online Car Destruction Simulator 3D",
@@ -136,54 +132,6 @@ export const games = [
   },
 
   {
-    id: "ffb3531c390647c49b6574f26b5c3943",
-    title: "Block Blast Adventure",
-    shortDescription:
-      "A classic block puzzle game similar to Tetris, challenging spatial awareness and quick decision-making under pressure.",
-    thumbnailUrl:
-      "https://img.gamedistribution.com/ffb3531c390647c49b6574f26b5c3943/thumbs-300x300.jpg",
-    iframeUrl:
-      "https://html5.gamedistribution.com/ffb3531c390647c49b6574f26b5c3943/",
-    genre: "Puzzle",
-    isFeatured: true,
-  },
-  {
-    id: "67c71e21b88e42688001712a201c9053",
-    title: "Street Racing Mania",
-    shortDescription:
-      "High-octane street racing action with customizable cars and dynamic tracks. Master the drift and challenge rivals in a massive open world.",
-    thumbnailUrl:
-      "https://img.gamedistribution.com/67c71e21b88e42688001712a201c9053/thumbs-300x300.jpg",
-    iframeUrl:
-      "https://html5.gamedistribution.com/67c71e21b88e42688001712a201c9053/",
-    genre: "Sports",
-    isFeatured: false,
-  },
-  {
-    id: "7b2a59f5188f4b509355153282436d65",
-    title: "Zombie Defense 2D",
-    shortDescription:
-      "A thrilling 2D tower defense game where you strategically place units to defend against waves of the undead.",
-    thumbnailUrl:
-      "https://img.gamedistribution.com/7b2a59f5188f4b509355153282436d65/thumbs-300x300.jpg",
-    iframeUrl:
-      "https://html5.gamedistribution.com/7b2a59f5188f4b509355153282436d65/",
-    genre: "Strategy",
-    isFeatured: true,
-  },
-  {
-    id: "e69c4c7959084803aa785160fa47c093",
-    title: "Dungeon Master Quest",
-    shortDescription:
-      "Explore deep dungeons, battle monsters, and collect ancient treasures in this isometric hack-and-slash adventure RPG.",
-    thumbnailUrl:
-      "https://img.gamedistribution.com/e69c4c7959084803aa785160fa47c093/thumbs-300x300.jpg",
-    iframeUrl:
-      "https://html5.gamedistribution.com/e69c4c7959084803aa785160fa47c093/",
-    genre: "Adventure",
-    isFeatured: false,
-  },
-  {
     id: "50e2417769914488b394e1d10202167d",
     title: "Knife Hit Master",
     shortDescription:
@@ -193,20 +141,61 @@ export const games = [
     iframeUrl:
       "https://html5.gamedistribution.com/50e2417769914488b394e1d10202167d/",
     genre: "Arcade",
+    isFeatured: true,
+  },
+
+  {
+    id: "f9a2e6b8c0d14e3692a7e4f1b8a5c3d2",
+    title: "Space Shooter Classic",
+    shortDescription:
+      "Relive the golden age of arcade gaming with this vertical scrolling space shooter. Dodge asteroids and destroy alien fleets.",
+    thumbnailUrl:
+      "https://img.gamedistribution.com/f9a2e6b8c0d14e3692a7e4f1b8a5c3d2/thumbs-300x300.jpg",
+    iframeUrl:
+      "https://html5.gamedistribution.com/f9a2e6b8c0d14e3692a7e4f1b8a5c3d2/",
+    genre: "Arcade",
     isFeatured: false,
   },
   {
-    id: "b75f71e5138840c889f074a37b34f64c",
-    title: "Word Search Mania",
+    id: "3c8d7a1e4f9b40c283d5a6b9e0c1f2a3",
+    title: "Ancient Runes Match",
     shortDescription:
-      "A classic word search puzzle game with various difficulty levels and themes. Great for vocabulary practice and relaxation.",
+      "A match-three puzzle game set in a mysterious ancient temple. Clear the board by matching three or more runes of the same color.",
     thumbnailUrl:
-      "https://img.gamedistribution.com/b75f71e5138840c889f074a37b34f64c/thumbs-300x300.jpg",
+      "https://img.gamedistribution.com/3c8d7a1e4f9b40c283d5a6b9e0c1f2a3/thumbs-300x300.jpg",
     iframeUrl:
-      "https://html5.gamedistribution.com/b75f71e5138840c889f074a37b34f64c/",
+      "https://html5.gamedistribution.com/3c8d7a1e4f9b40c283d5a6b9e0c1f2a3/",
     genre: "Puzzle",
     isFeatured: false,
   },
+  {
+    id: "7d6e5c4b3a2f10d9e8f7a6b5c4d3e2f1",
+    title: "Pixel Painter Pro",
+    shortDescription:
+      "A creative sandbox game where you can paint, draw, and animate using classic pixel art tools and an unlimited color palette.",
+    thumbnailUrl:
+      "https://img.gamedistribution.com/7d6e5c4b3a2f10d9e8f7a6b5c4d3e2f1/thumbs-300x300.jpg",
+    iframeUrl:
+      "https://html5.gamedistribution.com/7d6e5c4b3a2f10d9e8f7a6b5c4d3e2f1/",
+    genre: "Creative",
+    isFeatured: true,
+  },
+
+  // --- 2. More Unique games
+  //  (Added in response to "get more games not duplice") ---
+  {
+    id: "ffb3531c390647c49b6574f26b5c3943",
+    title: "Block Blast Adventure",
+    shortDescription:
+      "A classic block puzzle game challenging spatial awareness and quick decision-making under pressure.",
+    thumbnailUrl:
+      "https://img.gamedistribution.com/ffb3531c390647c49b6574f26b5c3943/thumbs-300x300.jpg",
+    iframeUrl:
+      "https://html5.gamedistribution.com/ffb3531c390647c49b6574f26b5c3943/",
+    genre: "Puzzle",
+    isFeatured: true,
+  },
+
   {
     id: "a919420d5c84482e9087276338a3a7b5",
     title: "Basketball Master",
@@ -218,6 +207,19 @@ export const games = [
       "https://html5.gamedistribution.com/a919420d5c84482e9087276338a3a7b5/",
     genre: "Sports",
     isFeatured: true,
+  },
+
+  {
+    id: "b75f71e5138840c889f074a37b34f64c",
+    title: "Word Search Mania",
+    shortDescription:
+      "A classic word search puzzle game with various difficulty levels and themes. Great for vocabulary practice and relaxation.",
+    thumbnailUrl:
+      "https://img.gamedistribution.com/b75f71e5138840c889f074a37b34f64c/thumbs-300x300.jpg",
+    iframeUrl:
+      "https://html5.gamedistribution.com/b75f71e5138840c889f074a37b34f64c/",
+    genre: "Puzzle",
+    isFeatured: false,
   },
   {
     id: "f87c14a4b2e8489880f080c9842a27b9",
@@ -252,6 +254,101 @@ export const games = [
       "https://img.gamedistribution.com/d19e048259444d33934d701a5b82c7f0/thumbs-300x300.jpg",
     iframeUrl:
       "https://html5.gamedistribution.com/d19e048259444d33934d701a5b82c7f0/",
+    genre: "Adventure",
+    isFeatured: false,
+  },
+
+  {
+    id: "9f6b4e0d3c5a8b7f1e0d9c8b7a6f5e4d",
+    title: "Medieval Chess Grandmaster",
+    shortDescription:
+      "A beautifully rendered 3D chess game with multiple AI difficulty levels and customizable boards. Test your strategic genius.",
+    thumbnailUrl:
+      "https://img.gamedistribution.com/9f6b4e0d3c5a8b7f1e0d9c8b7a6f5e4d/thumbs-300x300.jpg",
+    iframeUrl:
+      "https://html5.gamedistribution.com/9f6b4e0d3c5a8b7f1e0d9c8b7a6f5e4d/",
+    genre: "Strategy",
+    isFeatured: true,
+  },
+  {
+    id: "e1c2d3f4a5b67c8d9e0f1a2b3c4d5e6f",
+    title: "Platformer King",
+    shortDescription:
+      "Jump, run, and smash your way through colorful, challenging levels in this retro-inspired 2D platformer.",
+    thumbnailUrl:
+      "https://img.gamedistribution.com/e1c2d3f4a5b67c8d9e0f1a2b3c4d5e6f/thumbs-300x300.jpg",
+    iframeUrl:
+      "https://html5.gamedistribution.com/e1c2d3f4a5b67c8d9e0f1a2b3c4d5e6f/",
+    genre: "Arcade",
+    isFeatured: false,
+  },
+  {
+    id: "b2a1c9d0e8f7g6h5i4j3k2l1m0n9p8q7",
+    title: "Zen Color Book",
+    shortDescription:
+      "A relaxing digital coloring book for adults, featuring intricate patterns and mandalas to color and share.",
+    thumbnailUrl:
+      "https://img.gamedistribution.com/b2a1c9d0e8f7g6h5i4j3k2l1m0n9p8q7/thumbs-300x300.jpg",
+    iframeUrl:
+      "https://html5.gamedistribution.com/b2a1c9d0e8f7g6h5i4j3k2l1m0n9p8q7/",
+    genre: "Creative",
+    isFeatured: false,
+  },
+  {
+    id: "777888999aabbccddeeff001122334455",
+    title: "Football League Manager",
+    shortDescription:
+      "Take control of your favorite football club. Manage transfers, tactics, and finances to lead your team to glory.",
+    thumbnailUrl:
+      "https://img.gamedistribution.com/777888999aabbccddeeff001122334455/thumbs-300x300.jpg",
+    iframeUrl:
+      "https://html5.gamedistribution.com/777888999aabbccddeeff001122334455/",
+    genre: "Sports",
+    isFeatured: true,
+  },
+  {
+    id: "blocked-game-test",
+    title: "Security Blocked Test",
+    shortDescription:
+      "Used for testing the loading timeout and error fallback mechanism.",
+    thumbnailUrl: "https://placehold.co/300x300/FF0000/FFFFFF?text=ERROR",
+    iframeUrl: "https://placehold.co/600x400/FF0000/FFFFFF?text=BLOCKED+IFRAME",
+    genre: "Test",
+    isFeatured: false,
+  },
+  {
+    id: "67c71e21b88e42688001712a201c9053",
+    title: "Street Racing Mania",
+    shortDescription:
+      "High-octane street racing action with customizable cars and dynamic tracks. Master the drift and challenge rivals in a massive open world.",
+    thumbnailUrl:
+      "https://img.gamedistribution.com/67c71e21b88e42688001712a201c9053/thumbs-300x300.jpg",
+    iframeUrl:
+      "https://html5.gamedistribution.com/67c71e21b88e42688001712a201c9053/",
+    genre: "Sports",
+    isFeatured: false,
+  },
+  {
+    id: "7b2a59f5188f4b509355153282436d65",
+    title: "Zombie Defense 2D",
+    shortDescription:
+      "A thrilling 2D tower defense game where you strategically place units to defend against waves of the undead.",
+    thumbnailUrl:
+      "https://img.gamedistribution.com/7b2a59f5188f4b509355153282436d65/thumbs-300x300.jpg",
+    iframeUrl:
+      "https://html5.gamedistribution.com/7b2a59f5188f4b509355153282436d65/",
+    genre: "Strategy",
+    isFeatured: true,
+  },
+  {
+    id: "e69c4c7959084803aa785160fa47c093",
+    title: "Dungeon Master Quest",
+    shortDescription:
+      "Explore deep dungeons, battle monsters, and collect ancient treasures in this isometric hack-and-slash adventure RPG.",
+    thumbnailUrl:
+      "https://img.gamedistribution.com/e69c4c7959084803aa785160fa47c093/thumbs-300x300.jpg",
+    iframeUrl:
+      "https://html5.gamedistribution.com/e69c4c7959084803aa785160fa47c093/",
     genre: "Adventure",
     isFeatured: false,
   },

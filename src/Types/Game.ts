@@ -1,9 +1,8 @@
-import { Genre } from "./Genre";
-
 export interface Game {
-  id: number;
+  id: string;
   title: string;
   thumbnailUrl: string;
-  shortshort_description?: string;
-  genre: Genre;
+  iframeUrl:string;
+  shortDescription?: string;
+  genre: string;
 }

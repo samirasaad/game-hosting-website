@@ -1,15 +1,14 @@
-import { Genre } from "./Genre";
 
 export interface GameDetails {
-  id: number;
+  id: string;
   title: string;
-   thumbnailUrl: string;
+  thumbnailUrl: string;
   status: string;
-  short_description?: string;
-  genre: Genre;
+  shortDescription?: string;
+  genre: string;
   platform: string;
   publisher: string;
   developer: string;
-  release_date: string;
-  game_url: string;
+  releaseDate: string;
+  gameUrl: string;
 }

@@ -1,6 +1,6 @@
-import GameCard from "@/omponents/GameCard/GameCard";
+import GameCard from "@/components/GameCard/GameCard";
 import { games } from "@/data/games";
-import { Game } from "@/types/game";
+import { Game } from "@/types/Game";
 
 export default function GamesPage() {
   return (

@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { Game } from "@/types/game";
+import { Game } from "@/types/Game";
 
 interface Props {
   game: Game;

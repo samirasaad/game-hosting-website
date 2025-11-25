@@ -1,6 +1,6 @@
 "use client";
 
-import { Game } from "@/types/game";
+import { Game } from "@/types/Game";
 import Carousel from "react-multi-carousel";
 import GameCard from "../GameCard/GameCard";
 import "react-multi-carousel/lib/styles.css";

@@ -8,6 +8,7 @@ export const games = [
       "https://html5.gamedistribution.com/2dee9d404697435aa76111eb4015e1d5/",
     genre: "Puzzle",
     isFeatured: true,
+    isFavourite: false,
   },
   {
     id: "14495da5e76c4f1982de1160e4ffaa23",
@@ -20,6 +21,7 @@ export const games = [
       "https://html5.gamedistribution.com/14495da5e76c4f1982de1160e4ffaa23/",
     genre: "Adventure",
     isFeatured: false,
+    isFavourite: false,
   },
   {
     id: "8fd93d2811b348c0b1af153fa6fb419b",
@@ -32,6 +34,7 @@ export const games = [
       "https://html5.gamedistribution.com/8fd93d2811b348c0b1af153fa6fb419b/",
     genre: "Puzzle",
     isFeatured: false,
+    isFavourite: false,
   },
   {
     id: "5ab8e2766ffe427fa41da7f805b29264",
@@ -44,6 +47,7 @@ export const games = [
       "https://html5.gamedistribution.com/5ab8e2766ffe427fa41da7f805b29264/",
     genre: "Sports",
     isFeatured: true,
+    isFavourite: false,
   },
   {
     id: "6bfd4a61cee4409dbedf37b07e00f08f",
@@ -56,6 +60,7 @@ export const games = [
       "https://html5.gamedistribution.com/6bfd4a61cee4409dbedf37b07e00f08f/",
     genre: "Sports",
     isFeatured: false,
+    isFavourite: false,
   },
   {
     id: "bf92016704ce41a8af8fb3681977265a",
@@ -69,6 +74,7 @@ export const games = [
       "https://html5.gamedistribution.com/bf92016704ce41a8af8fb3681977265a/",
     genre: "Arcade",
     isFeatured: true,
+    isFavourite: false,
   },
   {
     id: "b821577113cd4219a1c7ce9eab890a35",
@@ -81,6 +87,7 @@ export const games = [
       "https://html5.gamedistribution.com/b821577113cd4219a1c7ce9eab890a35/",
     genre: "Action",
     isFeatured: true,
+    isFavourite: false,
   },
   {
     id: "00a4a9b730a64078b0f4b06e8a403d7d",
@@ -93,6 +100,7 @@ export const games = [
       "https://html5.gamedistribution.com/00a4a9b730a64078b0f4b06e8a403d7d/",
     genre: "Puzzle",
     isFeatured: false,
+    isFavourite: false,
   },
   {
     id: "544cf55c6ad44a3299099e813f7f5a9d",
@@ -105,6 +113,7 @@ export const games = [
       "https://html5.gamedistribution.com/544cf55c6ad44a3299099e813f7f5a9d/",
     genre: "Arcade",
     isFeatured: true,
+    isFavourite: false,
   },
   {
     id: "e979de806c4c485ea9e81138e01a2775",
@@ -117,6 +126,7 @@ export const games = [
       "https://html5.gamedistribution.com/e979de806c4c485ea9e81138e01a2775/",
     genre: "Puzzle",
     isFeatured: false,
+    isFavourite: false,
   },
   {
     id: "9467420d5c84482e9087276338a3a7b1",
@@ -129,6 +139,7 @@ export const games = [
       "https://html5.gamedistribution.com/9467420d5c84482e9087276338a3a7b1/",
     genre: "Strategy",
     isFeatured: false,
+    isFavourite: false,
   },
 
   {
@@ -142,6 +153,7 @@ export const games = [
       "https://html5.gamedistribution.com/50e2417769914488b394e1d10202167d/",
     genre: "Arcade",
     isFeatured: true,
+    isFavourite: false,
   },
 
   {
@@ -155,6 +167,7 @@ export const games = [
       "https://html5.gamedistribution.com/f9a2e6b8c0d14e3692a7e4f1b8a5c3d2/",
     genre: "Arcade",
     isFeatured: false,
+    isFavourite: false,
   },
   {
     id: "3c8d7a1e4f9b40c283d5a6b9e0c1f2a3",
@@ -167,6 +180,7 @@ export const games = [
       "https://html5.gamedistribution.com/3c8d7a1e4f9b40c283d5a6b9e0c1f2a3/",
     genre: "Puzzle",
     isFeatured: false,
+    isFavourite: false,
   },
   {
     id: "7d6e5c4b3a2f10d9e8f7a6b5c4d3e2f1",
@@ -179,6 +193,7 @@ export const games = [
       "https://html5.gamedistribution.com/7d6e5c4b3a2f10d9e8f7a6b5c4d3e2f1/",
     genre: "Creative",
     isFeatured: true,
+    isFavourite: false,
   },
 
   // --- 2. More Unique games
@@ -194,6 +209,7 @@ export const games = [
       "https://html5.gamedistribution.com/ffb3531c390647c49b6574f26b5c3943/",
     genre: "Puzzle",
     isFeatured: true,
+    isFavourite: false,
   },
 
   {
@@ -207,6 +223,7 @@ export const games = [
       "https://html5.gamedistribution.com/a919420d5c84482e9087276338a3a7b5/",
     genre: "Sports",
     isFeatured: true,
+    isFavourite: false,
   },
 
   {
@@ -220,6 +237,7 @@ export const games = [
       "https://html5.gamedistribution.com/b75f71e5138840c889f074a37b34f64c/",
     genre: "Puzzle",
     isFeatured: false,
+    isFavourite: false,
   },
   {
     id: "f87c14a4b2e8489880f080c9842a27b9",
@@ -232,6 +250,7 @@ export const games = [
       "https://html5.gamedistribution.com/f87c14a4b2e8489880f080c9842a27b9/",
     genre: "Strategy",
     isFeatured: false,
+    isFavourite: false,
   },
   {
     id: "c35a6791b8f04a37b4c6e9a5d1b3e8e2",
@@ -244,6 +263,7 @@ export const games = [
       "https://html5.gamedistribution.com/c35a6791b8f04a37b4c6e9a5d1b3e8e2/",
     genre: "Arcade",
     isFeatured: true,
+    isFavourite: false,
   },
   {
     id: "d19e048259444d33934d701a5b82c7f0",
@@ -256,6 +276,7 @@ export const games = [
       "https://html5.gamedistribution.com/d19e048259444d33934d701a5b82c7f0/",
     genre: "Adventure",
     isFeatured: false,
+    isFavourite: false,
   },
 
   {
@@ -269,6 +290,7 @@ export const games = [
       "https://html5.gamedistribution.com/9f6b4e0d3c5a8b7f1e0d9c8b7a6f5e4d/",
     genre: "Strategy",
     isFeatured: true,
+    isFavourite: false,
   },
   {
     id: "e1c2d3f4a5b67c8d9e0f1a2b3c4d5e6f",
@@ -281,6 +303,7 @@ export const games = [
       "https://html5.gamedistribution.com/e1c2d3f4a5b67c8d9e0f1a2b3c4d5e6f/",
     genre: "Arcade",
     isFeatured: false,
+    isFavourite: false,
   },
   {
     id: "b2a1c9d0e8f7g6h5i4j3k2l1m0n9p8q7",
@@ -293,6 +316,7 @@ export const games = [
       "https://html5.gamedistribution.com/b2a1c9d0e8f7g6h5i4j3k2l1m0n9p8q7/",
     genre: "Creative",
     isFeatured: false,
+    isFavourite: false,
   },
   {
     id: "777888999aabbccddeeff001122334455",
@@ -305,6 +329,7 @@ export const games = [
       "https://html5.gamedistribution.com/777888999aabbccddeeff001122334455/",
     genre: "Sports",
     isFeatured: true,
+    isFavourite: false,
   },
   {
     id: "blocked-game-test",
@@ -315,6 +340,7 @@ export const games = [
     iframeUrl: "https://placehold.co/600x400/FF0000/FFFFFF?text=BLOCKED+IFRAME",
     genre: "Test",
     isFeatured: false,
+    isFavourite: false,
   },
   {
     id: "67c71e21b88e42688001712a201c9053",
@@ -327,6 +353,7 @@ export const games = [
       "https://html5.gamedistribution.com/67c71e21b88e42688001712a201c9053/",
     genre: "Sports",
     isFeatured: false,
+    isFavourite: false,
   },
   {
     id: "7b2a59f5188f4b509355153282436d65",
@@ -339,6 +366,7 @@ export const games = [
       "https://html5.gamedistribution.com/7b2a59f5188f4b509355153282436d65/",
     genre: "Strategy",
     isFeatured: true,
+    isFavourite: false,
   },
   {
     id: "e69c4c7959084803aa785160fa47c093",
@@ -351,5 +379,6 @@ export const games = [
       "https://html5.gamedistribution.com/e69c4c7959084803aa785160fa47c093/",
     genre: "Adventure",
     isFeatured: false,
+    isFavourite: false,
   },
 ];

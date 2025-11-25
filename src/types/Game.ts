@@ -6,4 +6,5 @@ export interface Game {
   shortDescription?: string;
   genre: string;
   isFeatured:boolean
+  isFavourite:boolean
 }

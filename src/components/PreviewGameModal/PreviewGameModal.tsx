@@ -2,7 +2,7 @@
 
 import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import GameDetailsCard from "../GameDetailsCard/GameDetailsCard";
-import { Game } from "@/types/game";
+import { Game } from "@/types/Game";
 
 export default function PreviewGameModal({
   isOpen,

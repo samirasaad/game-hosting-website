@@ -2,8 +2,8 @@
 
 import { useParams, useRouter } from "next/navigation";
 import { games } from "@/data/games";
-import SimilarGames from "@/omponents/SimilarGames/SimilarGames";
-import GameDetailsCard from "@/omponents/GameDetailsCard/GameDetailsCard";
+import SimilarGames from "@/components/SimilarGames/SimilarGames";
+import GameDetailsCard from "@/components/GameDetailsCard/GameDetailsCard";
 
 export default function GameDetailsPage() {
   const router = useRouter();

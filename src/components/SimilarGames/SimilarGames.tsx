@@ -1,6 +1,6 @@
 "use client";
 
-import { Game } from "@/types/game";
+import { Game } from "@/types/Game";
 import GameCard from "../GameCard/GameCard";
 
 function SimilarGames({ games }: { games: Game[] }) {

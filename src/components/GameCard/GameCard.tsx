@@ -1,9 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { Game } from "@/types/game";
 import PreviewGameModal from "../PreviewGameModal/PreviewGameModal";
 import { useState } from "react";
+import { StarIcon as StarOutline } from "@heroicons/react/24/outline";
+import { StarIcon as StarSolid } from "@heroicons/react/24/solid";
+import { useGames } from "@/store/useGames";
+import { Game } from "@/types/Game";
 
 interface Props {
   game: Game;
@@ -12,6 +15,14 @@ interface Props {
 export default function GameCard({ game }: Props) {
   const [isOpen, setIsOpen] = useState(false);
 
+  const updateFavourite: (gameId: string) => void = useGames(
+    (state) => state?.updateFavourite
+  );
+
+  const handleToggleFavourite = (gameId: string) => {
+    updateFavourite(gameId);
+  };
+  
   return (
     <div
       className="
@@ -77,6 +88,17 @@ export default function GameCard({ game }: Props) {
               Play Now
             </span>
           </Link>
+          {game?.isFavourite ? (
+            <StarSolid
+              className="w-5 h-5 text-yellow-400 cursor-pointer"
+              onClick={() => handleToggleFavourite(game.id)}
+            />
+          ) : (
+            <StarOutline
+              className="w-5 h-5 text-yellow-400 cursor-pointer"
+              onClick={() => handleToggleFavourite(game.id)}
+            />
+          )}
         </div>
       </div>
 

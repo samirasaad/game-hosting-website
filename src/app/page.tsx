@@ -18,7 +18,7 @@ export default function Home() {
     (state) => state?.updateSelectedGenres
   );
 
-  const filterGames: (selectedGenres: string[]) => void = useGames(
+  const filterGames: (selectedGenres: string[], q: string) => void = useGames(
     (state) => state?.filterGames
   );
 
@@ -26,18 +26,39 @@ export default function Home() {
   const [searchQuery, setSearchQuery] = useState<string>("");
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(e.target.value);
+    const query = e.target.value.trim().toLowerCase();
+    setSearchQuery(query);
+
+    
+    // Only search if query is at least 2 characters
+    if (query.length >= 2) {
+      // Reset category filters
+      updateSelectedGenres(
+        filteredGenres.map((gn) => ({ ...gn, isChecked: false }))
+      );
+      filterGames(
+        filteredGenres.map((genre: Genre) => genre.name),
+        query
+      );
+    } else if(query.length === 0) {
+      filterGames(
+        [],
+        ""
+      );
+    }
   };
 
   const clearFilters = () => {
-    updateSelectedGenres(filteredGenres.map(gn=>({ ...gn, isChecked: false })));
-    filterGames(filteredGenres.map((genre: Genre) => genre.name));
+    updateSelectedGenres(
+      filteredGenres.map((gn) => ({ ...gn, isChecked: false }))
+    );
+    filterGames(filteredGenres.map((genre: Genre) => genre.name), searchQuery);
   };
 
   const applyFilters = () => {
     const activeGenres = filteredGenres.filter((genre) => genre.isChecked);
     updateSelectedGenres(filteredGenres);
-    filterGames(activeGenres.map((genre: Genre) => genre.name));
+    filterGames(activeGenres.map((genre: Genre) => genre.name), searchQuery);
   };
 
   const handleSelectCategory = (id: string) => {
@@ -64,7 +85,7 @@ export default function Home() {
         <input
           onChange={handleSearchChange}
           value={searchQuery}
-          className="border px-2 py-3 rounded-md mb-4 w-3/4 m-auto flex justify-center"
+          className="-inset-0.5 bg-white border flex justify-center m-auto mb-4 px-2 py-3 rounded-md  text-base text-black w-3/4"
           placeholder="Search for games"
         />
       </div>
@@ -86,7 +107,7 @@ export default function Home() {
             </div>
           ) : (
             <div className="lg:col-span-3 grid ">
-            <NoDataFoundLottie />
+              <NoDataFoundLottie />
               <p className="text-center">No Games Found</p>
             </div>
           )}

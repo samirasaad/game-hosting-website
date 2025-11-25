@@ -21,22 +21,32 @@ export const useGames = create(
             { type: "games/updateSelectedGenres" }
           ),
 
-        filterGames: (selectedGenres: string[]) =>
+        filterGames: (selectedGenres: string[], searchQuery?: string) =>
           set(
-            ({
-              allGames,
-              filteredGames,
-            }: {
-              allGames: Game[];
-              filteredGames: Game[];
-            }) => ({
-              filteredGames:
-                selectedGenres.length === 0
-                  ? allGames
-                  : allGames.filter((game: Game) =>
-                      selectedGenres.some((g) => game.genre.includes(g))
-                    ),
-            }),
+            ({ allGames }: { allGames: Game[] }) => {
+              // Clean up filters
+              const genresSet = Array.from(new Set(selectedGenres));
+              const query = (searchQuery ?? "").trim().toLowerCase();
+
+              // Filter logic
+              let filtered = allGames;
+
+              if (genresSet.length > 0) {
+                filtered = filtered.filter((game: Game) =>
+                  genresSet.some((g) =>
+                    game.genre.toLowerCase().includes(g.toLowerCase())
+                  )
+                );
+              }
+
+              if (query) {
+                filtered = filtered.filter((game: Game) =>
+                  game.title.toLowerCase().includes(query)
+                );
+              }
+
+              return { filteredGames: filtered };
+            },
             false,
             { type: "games/filterGames" }
           ),

@@ -28,10 +28,10 @@ export default function GameDetailsPage() {
   return (
     <>
       {/* Back Button */}
-      <div className="flex mx-5 my-2">
+      <div className="flex mx-13 mt-5 mb-2">
         <button
           onClick={() => router.back()}
-          className="px-4 py-2 bg-gray-300 text-gray-800 rounded hover:bg-gray-400 transition"
+          className="px-4 py-2 bg-gray-300 text-gray-800 rounded hover:bg-gray-400 transition cursor-pointer"
         >
           Back
         </button>

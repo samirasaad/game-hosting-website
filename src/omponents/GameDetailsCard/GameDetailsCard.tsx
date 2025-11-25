@@ -82,7 +82,7 @@ function GameDetailsCard(props: Props) {
           <button
             onClick={handleFullscreen}
             disabled={hasError || isLoading}
-            className={`px-4 py-2 rounded text-white transition 
+            className={`px-4 py-2 rounded text-white transition  cursor-pointer
               ${
                 !hasError && !isLoading
                   ? "bg-blue-600 hover:bg-blue-700"
@@ -95,7 +95,7 @@ function GameDetailsCard(props: Props) {
             Fullscreen
           </button>
           <button
-            className={`px-4 py-2 rounded transition text-white ${
+            className={`px-4 py-2 rounded transition text-white animate-pulse cursor-pointer ${
               !hasError && !isLoading
                 ? "bg-blue-600 hover:bg-blue-700"
                 : "bg-gray-400 cursor-not-allowed"

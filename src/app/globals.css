@@ -20,7 +20,7 @@ body {
  */
  /* Default surface backgrounds */
 .surface {
-  @apply  dark:bg-gray-800 border border-gray-200 dark:border-gray-700;
+  @apply   border border-gray-200 dark:border-gray-700;
 }
 
 /* Hoverable surfaces (cards, buttons, list items) */
@@ -30,7 +30,7 @@ body {
 
 /* Section backgrounds (nav, footer, etc.) */
 .surface-alt {
-  @apply bg-gray-100 dark:bg-gray-800/60 backdrop-blur-sm;
+  @apply  dark:bg-gray-800/60 backdrop-blur-sm;
 }
 
 /* Universal shadow */

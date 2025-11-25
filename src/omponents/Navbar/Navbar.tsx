@@ -32,7 +32,7 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="bg-white dark:bg-gray-900 text-black dark:text-white"
+      className=" dark:bg-gray-800 surface-alt border-b border-gray-200 dark:border-gray-700"
     >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">

@@ -1,10 +1,11 @@
+
 export interface Game {
   id: string;
   title: string;
   thumbnailUrl: string;
   iframeUrl:string;
   shortDescription?: string;
-  genre: string;
-  isFeatured:boolean
-  isFavourite:boolean
+  genre: string ;
+  isFeatured:boolean;
+  isFavourite:boolean;
 }

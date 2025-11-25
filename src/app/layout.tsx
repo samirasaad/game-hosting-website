@@ -27,15 +27,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="">
       <body
-      className=" bg-gray-50 dark:bg-gray-900
+        className=" bg-gray-50 dark:bg-gray-900
       text-gray-900 dark:text-gray-100
       transition-colors duration-300
       antialiased"
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar/>
-        {/* <div id="modal-root" className="dark:bg-gray-900"></div>   */}
-        {children}
+        <Navbar />
+        {/* <div id="modal-root" className="dark:bg-gray-900"> */}
+        {/* </div> */}
+          {children}
         <Footer />
       </body>
     </html>

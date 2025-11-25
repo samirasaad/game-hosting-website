@@ -17,6 +17,7 @@
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-multi-carousel": "^2.8.6",
+    "react-share": "^5.2.2",
     "reactjs-nextjs-carousel": "^0.0.7",
     "zustand": "^5.0.8"
   },

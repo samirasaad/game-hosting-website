@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { Game } from "@/types/Game";
+import ShareOptions from "../ShareOptions/ShareOptions";
 
 interface Props {
   game: Game;
@@ -12,7 +13,6 @@ function GameDetailsCard(props: Props) {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
 
-  // --- Core Fallback Mechanism: Set Error if loading takes too long ---
   useEffect(() => {
     // Only set up the timeout if we are trying to load and haven't failed yet
     if (isLoading && !hasError) {
@@ -63,7 +63,7 @@ function GameDetailsCard(props: Props) {
   return (
     <>
       {/* Game Details */}
-      <div className="m-5  space-y-6 w-full max-w-4xl">
+      <div className="m-5  space-y-6 ">
         {/* Title */}
         <h1 className="text-3xl font-bold text-center">{game.title}</h1>
 
@@ -94,7 +94,7 @@ function GameDetailsCard(props: Props) {
           >
             Fullscreen
           </button>
-          <button
+          {/* <button
             className={`px-4 py-2 rounded transition text-white animate-pulse cursor-pointer ${
               !hasError && !isLoading
                 ? "bg-blue-600 hover:bg-blue-700"
@@ -104,7 +104,8 @@ function GameDetailsCard(props: Props) {
             aria-label="Share this game"
           >
             Share
-          </button>
+          </button> */}
+          { !hasError && !isLoading && <ShareOptions title={game.title} url={game.url} />}
         </div>
 
         {/* Iframe container */}

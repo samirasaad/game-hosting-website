@@ -2,8 +2,9 @@
 export interface Game {
   id: string;
   title: string;
-  thumbnailUrl: string;
+  thumbnail?: string;
   iframeUrl:string;
+  url:string;
   shortDescription?: string;
   genre: string ;
   isFeatured:boolean;

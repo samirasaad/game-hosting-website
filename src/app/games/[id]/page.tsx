@@ -1,9 +1,38 @@
 "use client";
 
+import { Metadata } from "next";
 import { useParams, useRouter } from "next/navigation";
 import { games } from "@/data/games";
 import SimilarGames from "@/components/SimilarGames/SimilarGames";
 import GameDetailsCard from "@/components/GameDetailsCard/GameDetailsCard";
+
+// export async function generateMetadata({ params }): Promise<Metadata> {
+//   const game = games.find((g) => g.id === params.id);
+
+//   return {
+//     title: game?.title,
+//     description: game?.shortDescription,
+//     openGraph: {
+//       title: game?.title,
+//       description: game?.shortDescription,
+//       url: `${game?.url}`,
+//       images: [
+//         {
+//           url: `${game?.url}`,
+//           width: 1200,
+//           height: 630,
+//           alt: game?.title,
+//         },
+//       ],
+//     },
+//     twitter: {
+//       card: "summary_large_image",
+//       title: game?.title,
+//       description: game?.shortDescription,
+//       images: [`${game?.url}`],
+//     },
+//   };
+// }
 
 export default function GameDetailsPage() {
   const router = useRouter();

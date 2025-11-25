@@ -2,8 +2,8 @@
 
 import { useParams, useRouter } from "next/navigation";
 import { games } from "@/data/games";
-import SimilarGames from "@/Components/SimilarGames/SimilarGames";
-import GameDetailsCard from "@/Components/GameDetailsCard/GameDetailsCard";
+import SimilarGames from "@/omponents/SimilarGames/SimilarGames";
+import GameDetailsCard from "@/omponents/GameDetailsCard/GameDetailsCard";
 
 export default function GameDetailsPage() {
   const router = useRouter();
@@ -36,7 +36,7 @@ export default function GameDetailsPage() {
           Back
         </button>
       </div>
-      <main className="min-h-screen flex flex-col justify-center items-center bg-gray-50 p-6">
+      <main className="min-h-screen flex flex-col justify-center items-center  p-6">
         {/* details card */}
         <GameDetailsCard game={game} />
 

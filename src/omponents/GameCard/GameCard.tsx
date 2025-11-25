@@ -15,7 +15,7 @@ export default function GameCard({ game }: Props) {
   return (
     <div
       className="
-        relative  group rounded-xl overflow-hidden bg-white 
+        relative  group rounded-xl overflow-hidden surface 
         shadow transition-all border border-gray-200 
         hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02]
         flex flex-col h-full
@@ -59,7 +59,7 @@ export default function GameCard({ game }: Props) {
 
       {/* Game content */}
       <div className="p-4 flex flex-col space-y-2 min-h-[180px]">
-        <h3 className="text-lg font-semibold group-hover:text-blue-600 transition-colors">
+        <h3 className="text-lg font-semibold  transition-colors">
           {game.title}
         </h3>
 
@@ -73,7 +73,7 @@ export default function GameCard({ game }: Props) {
           </span>
 
           <Link href={`/games/${game.id}`}>
-            <span className="text-blue-600 hover:underline font-medium">
+            <span className=" hover:underline font-medium dark:text-amber-50">
               Play Now
             </span>
           </Link>

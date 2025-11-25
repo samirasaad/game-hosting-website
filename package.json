@@ -14,7 +14,8 @@
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-multi-carousel": "^2.8.6",
-    "reactjs-nextjs-carousel": "^0.0.7"
+    "reactjs-nextjs-carousel": "^0.0.7",
+    "zustand": "^5.0.8"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

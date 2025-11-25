@@ -63,7 +63,7 @@ function GameDetailsCard(props: Props) {
   return (
     <>
       {/* Game Details */}
-      <div className="m-5 max-w-3xl space-y-6">
+      <div className="m-5  space-y-6 w-full max-w-4xl">
         {/* Title */}
         <h1 className="text-3xl font-bold text-center">{game.title}</h1>
 

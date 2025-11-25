@@ -1,5 +1,5 @@
-import FeaturedGamesCarousel from "@/Components/FeaturedGamesCarousel/FeaturedGamesCarousel";
-import GameCard from "@/Components/GameCard/GameCard";
+import FeaturedGamesCarousel from "@/omponents/FeaturedGamesCarousel/FeaturedGamesCarousel";
+import GameCard from "@/omponents/GameCard/GameCard";
 import { games } from "@/data/games";
 import { Game } from "@/types/game";
 
@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="p-6 ">
       {/* Featured games carousel */}
-     <section className="mb-12 p-6 border rounded-2xl shadow-lg bg-white w-full">
+     <section className="surface mb-12 p-6 border rounded-2xl shadow-lg  xl:w-2/3 m-auto">
       <h1 className="text-3xl font-bold mb-4">Featured Games</h1>
        <FeaturedGamesCarousel
         slides={games.filter((game) => game.isFeatured) || []}

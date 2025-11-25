@@ -1,4 +1,4 @@
-import GameCard from "@/Components/GameCard/GameCard";
+import GameCard from "@/omponents/GameCard/GameCard";
 import { games } from "@/data/games";
 import { Game } from "@/types/game";
 

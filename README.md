@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Game Hosting Website 🎮
 
-## Getting Started
+A Next.js + Tailwind CSS web application for hosting and discovering game servers — a landing / catalog site for game-hosting services.
 
-First, run the development server:
+## 🚀 Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+[https://game-hosting-website-weld.vercel.app](https://game-hosting-website-weld.vercel.app)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📄 Table of Contents
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- [About](#about)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Installation & Setup (Local)](#installation--setup-local)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Configuration & Environment Variables](#configuration--environment-variables)
+- [Implemented Features](#implemented-features)
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🧾 About
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is a frontend application built with Next.js and styled with Tailwind CSS and used zustand as state management, intended as a “game hosting website” — where users can browse hosting plans/servers, or get information about hosting services.  
+It’s designed to be responsive, accessible, and easy to extend.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ✅ Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Responsive design — works on desktop & mobile.
+- Clean modern UI using Tailwind CSS.
+- Pages/routes handled by Next.js.
+- Modular, maintainable codebase with TypeScript support.
+- Easy to deploy (e.g. on Vercel).
+- Placeholder for dynamic content — ready for backend/API integration or static content expansion.
+
+---
+
+## 🛠️ Tech Stack
+
+- Next.js (React-based, with file-based routing)
+- Tailwind CSS for styling
+- TypeScript for type-safety
+- PostCSS / Tailwind config for CSS processing
+- (Optional) Any preferred package manager: npm, yarn, pnpm
+
+---
+
+## 🔧 Installation & Setup (Local)
+
+1. Clone the repository
+
+   ```bash
+   git clone https://github.com/samirasaad/game-hosting-website.git
+   cd game-hosting-website
+
+   ```
+
+2. Install dependencies  
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+
+3.  Start development server
+    npm run dev
+     # or
+    yarn dev
+     # or
+     pnpm dev
+
+4. Open your browser at http://localhost:3000 to see the website.
+
+---
+
+📂 Project Structure
+
+game-hosting-website/
+├── public/                 # Static assets (images, icons, etc.)
+├── src/                    # Source code: pages, components, styles, Store
+├── .gitignore              
+├── README.md               # This file  
+├── package.json            
+├── tailwind.config.ts      
+├── postcss.config.mjs      
+├── next.config.ts          
+└── tsconfig.json    
+
+
+---
+
+
+⚙️ Configuration & Environment Variables
+
+For now, the project does not rely on any secret keys or external APIs.
+
+---
+
+ ✅ Implemented Features
+
+- Next App router
+- Tailwind CSS integration
+- Zustand for state management
+- saving games and filter and categories in persistent state using zustand state management library with middleware
+- TypeScript support
+- Home page with featured games carousel, search bar, and filtering options
+- Favorites page to view saved games
+- Footer component
+- Navbar component with logo, home/favourites, featured links and mode toggle
+- GameCard component for displaying individual game info with Hover effects and smooth transitions
+- Play btn redirect to game details page
+- Game details page with game preview and additional information
+- Game reviewers section
+- Game rating display
+- Fullscreen mode for game iframe
+- Search by game name 
+- Filtering by game category 
+- Game categories sidebar
+- Multiple categories can be selected
+- Clearing filters functionality
+- Fully responsive design
+- Dark mode support
+- Mark game as favourite/unfavourite functionality
+- Game details page
+- Game preview
+- Handling data not found in games search  section and favourites page
+- Handling iframe error for invalid/broken url [if game cant load] in games list and preview modal
+- Handling share functionality 
+- Real-time search results
+- Smooth animations and transitions
+- Accessibility considerations (ARIA roles, keyboard navigation)
+
+
+---
+
+
+🔴 important version of used packages can be found in package.json file.

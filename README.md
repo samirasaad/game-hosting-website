@@ -112,6 +112,7 @@ For now, the project does not rely on any secret keys or external APIs.
 - Favorites page to view saved games
 - Footer component
 - Navbar component with logo, home/favourites, featured links and mode toggle
+- Breadcrumb in game details
 - GameCard component for displaying individual game info with Hover effects and smooth transitions
 - Play btn redirect to game details page
 - Game details page with game preview and additional information

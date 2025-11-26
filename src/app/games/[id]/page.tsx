@@ -70,7 +70,7 @@ export default function GameDetailsPage() {
           </button>
         </div>
         {/* details card */}
-        <div className="mx-5  space-y-6 w-2/3 border rounded-2xl p-3">
+        <div className="mx-5   w-2/3 border rounded-2xl p-3">
           <GameDetailsCard game={game} />
         </div>
         {/* Reviews */}

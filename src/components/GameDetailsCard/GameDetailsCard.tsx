@@ -51,21 +51,20 @@ function GameDetailsCard(props: Props) {
   return (
     <>
       {/* Game Details */}
-      {/* Title */}
-      <h1 className="text-3xl font-bold text-center">{game.title}</h1>
 
-      {/* Description */}
-      <p className="text-gray-600 text-center">{game.shortDescription}</p>
-
-      {/* Category */}
-      <div className="flex justify-center">
+      <div className="flex justify-between items-center my-4">
+        {/* Title */}
+        <h1 className="text-3xl font-bold text-center">{game.title}</h1>
+        {/* Category */}
         <span className="inline-block text-xs font-medium bg-blue-100 text-blue-700 px-3 py-1 rounded-full">
           {game.genre}
         </span>
       </div>
+      {/* Description */}
+      <p className="text-gray-600 ">{game.shortDescription}</p>
 
       {/* Actions buttons */}
-      <div className="flex justify-center gap-3">
+      <div className="flex justify-center gap-3 my-3">
         <button
           onClick={handleFullscreen}
           disabled={!isValidUrl || isLoading}

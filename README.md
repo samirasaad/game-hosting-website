@@ -44,6 +44,7 @@ It’s designed to be responsive, accessible, and easy to extend.
 
 - Next.js (React-based, with file-based routing)
 - Tailwind CSS for styling
+- Lotties for animated jsons
 - TypeScript for type-safety
 - PostCSS / Tailwind config for CSS processing
 - Zustand as state managment

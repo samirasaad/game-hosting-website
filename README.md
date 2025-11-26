@@ -42,7 +42,7 @@ It’s designed to be responsive, accessible, and easy to extend.
 
 ## 🛠️ Tech Stack
 
-- Next.js (React-based, with file-based routing)
+- Next.js (React-based, with app router)
 - Tailwind CSS for styling
 - Lotties for animated jsons
 - TypeScript for type-safety

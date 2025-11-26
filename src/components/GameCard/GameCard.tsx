@@ -47,7 +47,11 @@ export default function GameCard({ game, isFrameFullHeight }: Props) {
         style={{ minHeight: 350 }}
       >
         {/* Game iframe */}
-        <div className="w-full  bg-gray-100 overflow-hidden">
+        <div
+          className={` w-full  bg-gray-100 overflow-hidden ${
+            !isValidUrl && " h-40"
+          }`}
+        >
           <div className="relative group/iframe h-full">
             {isValidUrl ? (
               <iframe

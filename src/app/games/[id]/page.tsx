@@ -6,8 +6,8 @@ import GameDetailsCard from "@/components/GameDetailsCard/GameDetailsCard";
 import { useGames } from "@/store/useGames";
 import { Game } from "@/types/Game";
 import GameReviewCard from "@/components/GameReviewes/GameReviewes";
-import Image from "next/image";
 import ReviewCard from "@/components/GameReviewes/ReviewCard";
+import BreadCrumb from "@/components/BreadCrumb/BreadCrumb";
 // export async function generateMetadata({ params }): Promise<Metadata> {
 //   const game = games.find((g) => g.id === params.id);
 
@@ -58,7 +58,8 @@ export default function GameDetailsPage() {
 
   return (
     <>
-      <main className="min-h-screen flex flex-col justify-center items-center">
+      <main className="min-h-screen flex flex-col  items-center">
+        <BreadCrumb gameTitle={game.title} />
         {/* Back Button */}
         <div className="flex mx-13 mt-5 mb-2 w-2/3">
           <button

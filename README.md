@@ -78,7 +78,7 @@ It’s designed to be responsive, accessible, and easy to extend.
 
 ---
 
-📂 Project Structure
+## 📂 Project Structure
 
 game-hosting-website/
 ├── public/                 # Static assets (images, icons, etc.)
@@ -95,13 +95,13 @@ game-hosting-website/
 ---
 
 
-⚙️ Configuration & Environment Variables
+## ⚙️ Configuration & Environment Variables
 
 For now, the project does not rely on any secret keys or external APIs.
 
 ---
 
- ✅ Implemented Features
+## ✅ Implemented Features
 
 - Next App router
 - Tailwind CSS integration

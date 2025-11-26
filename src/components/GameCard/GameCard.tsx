@@ -11,6 +11,7 @@ import { HeartIcon } from "@heroicons/react/24/outline";
 import { HeartIcon as HeartSolidIcon } from "@heroicons/react/24/solid";
 import { validateIframeUrl } from "@/utilis/validateIFrameUrl.helper";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
+import BrokenUrlLottie from "../Lotties/BrokenUrlLottie";
 
 interface Props {
   game: Game;
@@ -49,7 +50,7 @@ export default function GameCard({ game, isFrameFullHeight }: Props) {
         {/* Game iframe */}
         <div
           className={` w-full  bg-gray-100 overflow-hidden ${
-            !isValidUrl && " h-40"
+            !isValidUrl && " h-38"
           }`}
         >
           <div className="relative group/iframe h-full">
@@ -64,7 +65,8 @@ export default function GameCard({ game, isFrameFullHeight }: Props) {
                 tabIndex={-1}
               />
             ) : (
-              <div className="flex items-center justify-center h-full">
+              <div className="flex flex-col items-center justify-center h-full">
+                <BrokenUrlLottie/>
                 <p className="text-gray-500">Unable to load game preview</p>
               </div>
             )}

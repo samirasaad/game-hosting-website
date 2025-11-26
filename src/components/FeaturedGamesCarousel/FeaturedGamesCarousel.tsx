@@ -38,7 +38,7 @@ function FeaturedGamesCarousel({ slides }: { slides: Game[] }) {
       showDots={true}
       responsive={responsive}
       infinite={true}
-      autoPlay={true}
+      autoPlay={false}
       autoPlaySpeed={3000}
       keyBoardControl={true}
       customTransition="transform 2s cubic-bezier(0.57, 0, 0.2, 1)"

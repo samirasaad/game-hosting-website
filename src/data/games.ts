@@ -412,7 +412,7 @@ export const games = [
     iframeUrl:
       "https://html5.gamedistribution.com/388f899901ff1f7242718e9d232681e32b3d/?gd_sdk_referrer_url=https://gamedistribution.com/games/paint-rush/",
     genre: "Puzzle",
-    isFeatured: false,
+    isFeatured: true,
     isFavourite: false,
     rating: 3,
     url: "https://gamedistribution.com/games/paint-rush/",

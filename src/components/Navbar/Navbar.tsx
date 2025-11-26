@@ -56,7 +56,7 @@ export default function Navbar() {
                 <Image
                   alt="logo"
                   src="/games/game.jpg"
-                  className="hidden h-8 w-auto lg:block rounded-full"
+                  className="w-auto lg:block rounded-full"
                   width={32}
                   height={32}
                 />

@@ -23,12 +23,17 @@ function Games() {
     } else if (type === "featured") {
       setFavs(allGames.filter((game) => game.isFeatured));
     }
-  }, [type,allGames]);
+  }, [type, allGames]);
 
   return (
     <>
       <h4 className="shadow-xs text-3xl font-bold my-10 container m-auto">
-        Favourite Games
+        {type === "favourite"
+          ? "Favourite"
+          : type === "featured"
+          ? "Featured"
+          : "All"}{" "}
+        Games
       </h4>
       {favs && favs.length ? (
         <section className=" m-auto container ">

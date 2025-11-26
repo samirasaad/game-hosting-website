@@ -10,6 +10,7 @@ import ShareOptions from "../ShareOptions/ShareOptions";
 import { HeartIcon } from "@heroicons/react/24/outline";
 import { HeartIcon as HeartSolidIcon } from "@heroicons/react/24/solid";
 import { validateIframeUrl } from "@/utilis/validateIFrameUrl.helper";
+import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 
 interface Props {
   game: Game;
@@ -25,8 +26,6 @@ export default function GameCard({ game, isFrameFullHeight }: Props) {
   const handleToggleFavourite = (gameId: string) => {
     updateFavourite(gameId);
   };
-
- 
 
   useEffect(() => {
     const validate = async () => {
@@ -50,21 +49,21 @@ export default function GameCard({ game, isFrameFullHeight }: Props) {
         {/* Game iframe */}
         <div className="w-full aspect-video min-h-[180px] bg-gray-100 overflow-hidden">
           <div className="relative group/iframe h-full">
-          {isValidUrl ? (
-            <iframe
-              src={game.iframeUrl}
-              className={`
+            {isValidUrl ? (
+              <iframe
+                src={game.iframeUrl}
+                className={`
                 ${isFrameFullHeight ? "h-full" : "h-48"}
                 w-full  object-cover pointer-events-none`}
-              title={game.title}
-              allow="fullscreen"
-              tabIndex={-1}
-            />
-          ) : (
-            <div className="flex items-center justify-center h-full">
-              <p className="text-gray-500">Unable to load game preview</p>
-            </div>
-          )}
+                title={game.title}
+                allow="fullscreen"
+                tabIndex={-1}
+              />
+            ) : (
+              <div className="flex items-center justify-center h-full">
+                <p className="text-gray-500">Unable to load game preview</p>
+              </div>
+            )}
 
             {/* Overlay and Preview Button */}
             <div
@@ -94,7 +93,7 @@ export default function GameCard({ game, isFrameFullHeight }: Props) {
 
         {/* Game content */}
         <div className="p-4 flex flex-col space-y-2 min-h-[180px]">
-          <h3 className="flex items-center justify-between text-lg font-semibold  transition-colors text-sm">
+          <h3 className="flex items-center justify-between font-semibold  transition-colors text-sm">
             {game.title}
             {/* Mark game as fav/unfav */}
             {game?.isFavourite ? (
@@ -134,7 +133,11 @@ export default function GameCard({ game, isFrameFullHeight }: Props) {
           <div className=" flex justify-end items-end space-y-2 border-t pt-2">
             {/* Redirection to game details */}
             <Link href={`/games/${game.id}`} className="mb-0">
-              <span className="mx-2 hover:underline font-medium dark:text-amber-50 mb-0">
+              <span
+                className="flex items-center mx-2 font-medium text-transparent bg-clip-text 
+             bg-gradient-to-r from-amber-400 via-pink-500 to-purple-600 
+             animate-fancy transition-transform duration-500 hover:scale-110 hover:rotate-3 hover:tracking-wider"
+              >
                 Play
               </span>
             </Link>

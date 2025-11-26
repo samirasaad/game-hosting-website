@@ -1,7 +1,12 @@
 import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
 
-export const useTheme = create(
+interface ThemeStore {
+  theme: "light" | "dark";
+  setTheme: (theme: "light" | "dark") => void;
+}
+
+export const useTheme = create<ThemeStore>()(
   devtools(
     persist(
       (set) => ({

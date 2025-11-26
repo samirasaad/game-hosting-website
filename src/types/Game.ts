@@ -1,3 +1,4 @@
+import { Review } from "./Review";
 
 export interface Game {
   id: string;
@@ -9,4 +10,6 @@ export interface Game {
   genre: string ;
   isFeatured:boolean;
   isFavourite:boolean;
+  rating:number,
+  reviews:Review[]
 }

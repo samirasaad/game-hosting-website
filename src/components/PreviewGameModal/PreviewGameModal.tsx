@@ -28,7 +28,9 @@ export default function PreviewGameModal({
               className="relative transform overflow-hidden rounded-lg text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-2xl data-closed:sm:translate-y-0 data-closed:sm:scale-95 bg-white dark:bg-gray-800"
             >
               {/* Dialog content */}
-              <GameDetailsCard game={game} />
+              <div className="m-5  space-y-6 ">
+                <GameDetailsCard game={game} />
+              </div>
               <div className="bg-gray-50 dark:bg-gray-900 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                 <button
                   type="button"

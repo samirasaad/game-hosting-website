@@ -4,11 +4,9 @@ import {
   FacebookShareButton,
   TwitterShareButton,
   WhatsappShareButton,
-  TelegramShareButton,
   FacebookIcon,
   TwitterIcon,
   WhatsappIcon,
-  TelegramIcon,
 } from "react-share";
 
 interface Props {
@@ -32,9 +30,7 @@ export default function ShareOptions({ title, url }: Props) {
           <WhatsappIcon size={25} round />
         </WhatsappShareButton>
 
-        <TelegramShareButton url={url} title={title}>
-          <TelegramIcon size={25} round />
-        </TelegramShareButton>
+       
       </div>
     </div>
   );

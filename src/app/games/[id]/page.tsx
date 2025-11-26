@@ -1,11 +1,13 @@
 "use client";
 
-import { Metadata } from "next";
 import { useParams, useRouter } from "next/navigation";
-import { games } from "@/data/games";
 import SimilarGames from "@/components/SimilarGames/SimilarGames";
 import GameDetailsCard from "@/components/GameDetailsCard/GameDetailsCard";
-
+import { useGames } from "@/store/useGames";
+import { Game } from "@/types/Game";
+import GameReviewCard from "@/components/GameReviewes/GameReviewes";
+import Image from "next/image";
+import ReviewCard from "@/components/GameReviewes/ReviewCard";
 // export async function generateMetadata({ params }): Promise<Metadata> {
 //   const game = games.find((g) => g.id === params.id);
 
@@ -37,7 +39,7 @@ import GameDetailsCard from "@/components/GameDetailsCard/GameDetailsCard";
 export default function GameDetailsPage() {
   const router = useRouter();
   const { id } = useParams();
-
+  const games: Game[] = useGames((state) => state?.allGames);
   const game = games.find((g) => g.id === id);
 
   if (!game) {
@@ -56,19 +58,32 @@ export default function GameDetailsPage() {
 
   return (
     <>
-      {/* Back Button */}
-      <div className="flex mx-13 mt-5 mb-2">
-        <button
-          onClick={() => router.back()}
-          className="px-4 py-2 bg-gray-300 text-gray-800 rounded hover:bg-gray-400 transition cursor-pointer"
-        >
-          Back
-        </button>
-      </div>
-      <main className="min-h-screen flex flex-col justify-center items-center  p-6">
+      <main className="min-h-screen flex flex-col justify-center items-center">
+        {/* Back Button */}
+        <div className="flex mx-13 mt-5 mb-2 w-2/3">
+          <button
+            onClick={() => router.back()}
+            className="px-4 py-2 bg-gray-300 text-gray-800 rounded hover:bg-gray-400 transition cursor-pointer"
+          >
+            Back
+          </button>
+        </div>
         {/* details card */}
-        <GameDetailsCard game={game} />
-
+        <div className="mx-5  space-y-6 w-2/3 border rounded-2xl p-3">
+          <GameDetailsCard game={game} />
+        </div>
+        {/* Reviews */}
+        <GameReviewCard title="Game Reviews">
+          {game.reviews && game.reviews.length > 0 ? (
+            <ul className="space-y-4">
+              {game.reviews.map((review, index) => (
+                <ReviewCard key={review.id} review={review} />
+              ))}
+            </ul>
+          ) : (
+            <p>No reviews available for this game.</p>
+          )}
+        </GameReviewCard>
         {/* Similar Games */}
         <SimilarGames
           games={games.filter(

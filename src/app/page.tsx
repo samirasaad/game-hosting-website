@@ -22,43 +22,49 @@ export default function Home() {
     (state) => state?.filterGames
   );
 
-  // const [selectedGenres, setSelectedGenres] = useState<Genre[]>([...genres]);
-  const [searchQuery, setSearchQuery] = useState<string>("");
+  const updateSearchQuery: (query: string) => void = useGames(
+    (state) => state?.updateSearchQuery
+  );
+  const searchQuery: string = useGames((state) => state?.searchQuery);
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const query = e.target.value.trim().toLowerCase();
-    setSearchQuery(query);
+    updateSearchQuery(query);
 
-    
     // Only search if query is at least 2 characters
-    if (query.length >= 2) {
-      // Reset category filters
+    // Reset category filters
+    updateSelectedGenres(
+      filteredGenres.map((gn) => ({ ...gn, isChecked: false }))
+    );
+    filterGames(
+      filteredGenres.map((genre: Genre) => genre.name),
+      query
+    );
+  };
+
+  const clearFilters = () => {
+    const activeGenres = filteredGenres.filter((genre) => genre.isChecked);
+    if (activeGenres.length > 0) {
       updateSelectedGenres(
         filteredGenres.map((gn) => ({ ...gn, isChecked: false }))
       );
       filterGames(
         filteredGenres.map((genre: Genre) => genre.name),
-        query
-      );
-    } else if(query.length === 0) {
-      filterGames(
-        [],
-        ""
+        searchQuery
       );
     }
   };
 
-  const clearFilters = () => {
-    updateSelectedGenres(
-      filteredGenres.map((gn) => ({ ...gn, isChecked: false }))
-    );
-    filterGames(filteredGenres.map((genre: Genre) => genre.name), searchQuery);
-  };
-
   const applyFilters = () => {
     const activeGenres = filteredGenres.filter((genre) => genre.isChecked);
-    updateSelectedGenres(filteredGenres);
-    filterGames(activeGenres.map((genre: Genre) => genre.name), searchQuery);
+    if (activeGenres.length > 0) {
+      // If there are active genres, we can filter the games based on them
+      updateSelectedGenres(filteredGenres);
+      filterGames(
+        activeGenres.map((genre: Genre) => genre.name),
+        searchQuery
+      );
+    }
   };
 
   const handleSelectCategory = (id: string) => {
@@ -73,7 +79,7 @@ export default function Home() {
   return (
     <main className="p-6 ">
       {/* Featured games carousel */}
-      <section className="surface mb-12 p-6 border rounded-2xl shadow-lg  xl:w-2/3 m-auto">
+      <section className="surface mb-12 p-6 border rounded-2xl shadow-lg  container m-auto">
         <h1 className="text-3xl font-bold mb-4">Featured Games</h1>
         <FeaturedGamesCarousel
           slides={allGames?.filter((game) => game.isFeatured) || []}
@@ -81,15 +87,15 @@ export default function Home() {
       </section>
 
       {/* Search for games */}
-      <div className="w-3/4 m-auto">
+      <div className="w-3/4 m-auto mb-10">
         <input
           onChange={handleSearchChange}
           value={searchQuery}
-          className="-inset-0.5 bg-white border flex justify-center m-auto mb-4 px-2 py-3 rounded-md  text-base text-black w-3/4"
+          className="-inset-0.5 bg-white border flex justify-center m-auto mb-4 px-2 py-3 rounded-xl  text-base text-black w-3/4"
           placeholder="Search for games"
         />
       </div>
-      <section className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+      <section className="gap-8 grid md:grid-cols-3 m-auto container">
         {/* Sidebar */}
         <Aside
           selectedGenres={filteredGenres}
@@ -100,13 +106,13 @@ export default function Home() {
         {/* Game Cards Section */}
         <>
           {filteredGames.length > 0 ? (
-            <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+            <div className="sm:col-span-3 md:col-span-2 flex flex-col gap-6">
               {filteredGames?.map((game: Game) => (
-                <GameCard key={game.id} game={game} />
+                <GameCard key={game.id} game={game} isFrameFullHeight={false} />
               ))}
             </div>
           ) : (
-            <div className="lg:col-span-3 grid ">
+            <div className="flex flex-col items-center justify-center">
               <NoDataFoundLottie />
               <p className="text-center">No Games Found</p>
             </div>

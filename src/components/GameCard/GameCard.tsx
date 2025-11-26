@@ -1,51 +1,70 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import PreviewGameModal from "../PreviewGameModal/PreviewGameModal";
-import { useState } from "react";
-import { StarIcon as StarOutline } from "@heroicons/react/24/outline";
+import { useEffect, useState } from "react";
 import { StarIcon as StarSolid } from "@heroicons/react/24/solid";
 import { useGames } from "@/store/useGames";
 import { Game } from "@/types/Game";
 import ShareOptions from "../ShareOptions/ShareOptions";
+import { HeartIcon } from "@heroicons/react/24/outline";
+import { HeartIcon as HeartSolidIcon } from "@heroicons/react/24/solid";
+import { validateIframeUrl } from "@/utilis/validateIFrameUrl.helper";
 
 interface Props {
   game: Game;
+  isFrameFullHeight: boolean;
 }
 
-export default function GameCard({ game }: Props) {
+export default function GameCard({ game, isFrameFullHeight }: Props) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isValidUrl, setIsValidUrl] = useState(true);
 
-  const updateFavourite: (gameId: string) => void = useGames(
-    (state) => state?.updateFavourite
-  );
+  const updateFavourite = useGames((state) => state.updateFavourite);
 
   const handleToggleFavourite = (gameId: string) => {
     updateFavourite(gameId);
   };
 
+ 
+
+  useEffect(() => {
+    const validate = async () => {
+      const isValid = await validateIframeUrl(game.iframeUrl);
+      setIsValidUrl(isValid);
+    };
+    validate();
+  }, [game]);
+
   return (
     <>
       <div
-        className="
-        relative  group rounded-xl overflow-hidden surface 
+        className={`
+        relative justify-between  group rounded-xl overflow-hidden surface 
         shadow transition-all border border-gray-200 
         hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02]
-        flex flex-col h-full
-      "
+        flex flex-col  ${isFrameFullHeight ? "h-full" : "h-48"}
+      `}
         style={{ minHeight: 380 }}
       >
         {/* Game iframe */}
         <div className="w-full aspect-video min-h-[180px] bg-gray-100 overflow-hidden">
           <div className="relative group/iframe h-full">
+          {isValidUrl ? (
             <iframe
               src={game.iframeUrl}
-              className="w-full h-full object-cover pointer-events-none"
+              className={`
+                ${isFrameFullHeight ? "h-full" : "h-48"}
+                w-full  object-cover pointer-events-none`}
               title={game.title}
               allow="fullscreen"
               tabIndex={-1}
             />
+          ) : (
+            <div className="flex items-center justify-center h-full">
+              <p className="text-gray-500">Unable to load game preview</p>
+            </div>
+          )}
 
             {/* Overlay and Preview Button */}
             <div
@@ -75,43 +94,57 @@ export default function GameCard({ game }: Props) {
 
         {/* Game content */}
         <div className="p-4 flex flex-col space-y-2 min-h-[180px]">
-          <h3 className="flex items-center justify-between text-lg font-semibold  transition-colors">
+          <h3 className="flex items-center justify-between text-lg font-semibold  transition-colors text-sm">
             {game.title}
             {/* Mark game as fav/unfav */}
             {game?.isFavourite ? (
-              <StarSolid
-                className="w-5 h-5 text-yellow-400 cursor-pointer"
+              <HeartSolidIcon
+                className="w-5 h-5 text-red-600 cursor-pointer"
                 onClick={() => handleToggleFavourite(game.id)}
               />
             ) : (
-              <StarOutline
-                className="w-5 h-5 text-yellow-400 cursor-pointer"
+              <HeartIcon
+                className="w-5 h-5 text-red-600 cursor-pointer"
                 onClick={() => handleToggleFavourite(game.id)}
               />
             )}
           </h3>
 
-          <p className="text-sm text-gray-500 line-clamp-2">
+          <p
+            className={`text-sm text-gray-500 line-clamp-2 ${
+              isFrameFullHeight ? "max-w-80" : ""
+            }
+           `}
+          >
             {game.shortDescription || ""}
           </p>
 
-          <div className="mt-auto flex justify-between items-center space-y-2 ">
+          <div className="mt-auto flex  items-center gap-2">
+            {/* Game genre */}
             <span className="mb-0 bg-blue-100 text-blue-700 text-xs font-medium rounded-full py-1 px-3">
               {game.genre || "Unknown"}
             </span>
+            {/* Game rating */}
 
+            <div className=" items-center flex">
+              <p> {game.rating || ""}</p>
+              <StarSolid className="w-3 h-3 text-yellow-300" />
+            </div>
+          </div>
+          <div className=" flex justify-end items-end space-y-2 border-t pt-2">
             {/* Redirection to game details */}
             <Link href={`/games/${game.id}`} className="mb-0">
-              <span className=" hover:underline font-medium dark:text-amber-50 mb-0">
+              <span className="mx-2 hover:underline font-medium dark:text-amber-50 mb-0">
                 Play
               </span>
             </Link>
 
+            {/* Share options */}
             <ShareOptions title={game.title} url={game.url} />
           </div>
         </div>
 
-        {/* preview modal */}
+        {/* Preview modal */}
       </div>
       <PreviewGameModal isOpen={isOpen} setIsOpen={setIsOpen} game={game} />
     </>

@@ -5,13 +5,41 @@ import { Game } from "@/types/Game";
 import { Genre } from "@/types/Genre";
 import { genres } from "@/data/genrs";
 
-export const useGames = create(
+
+
+interface GamesStore {
+  allGames: Game[];
+  filteredGames: Game[];
+  filteredGenres: Genre[];
+  searchQuery: string;
+  updateSearchQuery: (query: string) => void;
+  updateSelectedGenres: (selectedGenres: Genre[]) => void;
+  filterGames: (selectedGenres: string[], searchQuery?: string) => void;
+  updateFavourite: (gameId: string) => void;
+}
+
+export const useGames = create<GamesStore>()(
   devtools(
     persist(
       (set) => ({
-        allGames: [...games],
-        filteredGames: [...games],
+        allGames: games.map(game => ({
+          ...game,
+          reviews: game.reviews ?? [],
+        })),
+        filteredGames: games.map(game => ({
+          ...game,
+          reviews: game.reviews ?? [],
+        })),
         filteredGenres: [...genres],
+        searchQuery: "",
+        updateSearchQuery: (query: string) =>
+          set(
+            () => ({
+              searchQuery: query,
+            }),
+            false,
+            { type: "games/updateSearchQuery" }
+          ),
         updateSelectedGenres: (selectedGenres: Genre[]) =>
           set(
             () => ({
@@ -20,7 +48,6 @@ export const useGames = create(
             false,
             { type: "games/updateSelectedGenres" }
           ),
-
         filterGames: (selectedGenres: string[], searchQuery?: string) =>
           set(
             ({ allGames }: { allGames: Game[] }) => {

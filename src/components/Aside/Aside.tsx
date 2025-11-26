@@ -13,12 +13,12 @@ function Aside(props: Props) {
     props;
 
   return (
-    <aside className="lg:col-span-1 border dark:bg-gray-900 shadow rounded-xl p-4 h-fit ">
+    <aside className=" border dark:bg-gray-900 shadow rounded-xl p-4 md:p-6 mb-6 lg:mb-0 h-fit">
       <h2 className="text-xl font-semibold mb-4">Filter by Category</h2>
 
-      <ul className="space-y-3  dark:text-gray-300">
+      <ul className="space-y-3 dark:text-gray-300">
         {selectedGenres.map((genre) => (
-          <li key={genre.id} className="hover:text-blue-500 ">
+          <li key={genre.id} className="hover:text-blue-500">
             <input
               className="cursor-pointer"
               id={genre.name}
@@ -34,15 +34,17 @@ function Aside(props: Props) {
           </li>
         ))}
       </ul>
-      <div className="flex justify-between mt-6">
+      <div className="flex flex-col sm:flex-row justify-between gap-2 mt-6">
         <button
           onClick={applyFilters}
-          className="flex rounded-md bg-gray-400 ps-2 pe-3 py-2 cursor-pointer align-baseline"
+          className="justify-center align-center flex items-center rounded-md bg-gray-400 px-3 py-2 cursor-pointer"
         >
-          <CheckIcon className="w-5 h-5 text-green-400 cursor-pointer" /> Apply
+          <CheckIcon className="w-5 h-5 text-green-400 mr-1" /> Apply
         </button>
-
-        <button className="border rounded-md px-4 py-2 cursor-pointer" onClick={clearFilters}>
+        <button
+          className="border rounded-md px-4 py-2 cursor-pointer"
+          onClick={clearFilters}
+        >
           Clear
         </button>
       </div>

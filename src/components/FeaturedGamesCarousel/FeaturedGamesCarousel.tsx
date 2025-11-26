@@ -15,9 +15,14 @@ function FeaturedGamesCarousel({ slides }: { slides: Game[] }) {
       slidesToSlide: 3, // optional, default to 1.
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 1024, min: 700 },
       items: 2,
       slidesToSlide: 2, // optional, default to 1.
+    },
+     x: {
+      breakpoint: { max: 700, min: 464 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -45,7 +50,7 @@ function FeaturedGamesCarousel({ slides }: { slides: Game[] }) {
     >
       {slides.map((game: Game) => (
         <div key={game.id} className="p-2">
-          <GameCard game={game} />
+          <GameCard game={game} isFrameFullHeight={true}/>
         </div>
       ))}
     </Carousel>

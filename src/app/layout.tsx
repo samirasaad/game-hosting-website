@@ -25,18 +25,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="">
+    <html lang="en" className="h-full">
       <body
-        className=" bg-gray-50 dark:bg-gray-900
+        className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900
       text-gray-900 dark:text-gray-100
       transition-colors duration-300
       antialiased"
-        // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
-        {/* <div id="modal-root" className="dark:bg-gray-900"> */}
-        {/* </div> */}
-          {children}
+        <main className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>

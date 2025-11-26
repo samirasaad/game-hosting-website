@@ -137,6 +137,9 @@ For now, the project does not rely on any secret keys or external APIs.
 - Real-time search results
 - Smooth animations and transitions
 - Accessibility considerations (ARIA roles, keyboard navigation)
+- Featured games page
+- Featured games carsoul
+- Similar games section in details page
 
 
 ---

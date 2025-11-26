@@ -46,6 +46,7 @@ It’s designed to be responsive, accessible, and easy to extend.
 - Tailwind CSS for styling
 - TypeScript for type-safety
 - PostCSS / Tailwind config for CSS processing
+- Zustand as state managment
 - (Optional) Any preferred package manager: npm, yarn, pnpm
 
 ---

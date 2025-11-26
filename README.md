@@ -104,7 +104,7 @@ For now, the project does not rely on any secret keys or external APIs.
 ---
 
 ## ✅ Implemented Features
-
+Back button to return to home
 - Next App router
 - Tailwind CSS integration
 - Zustand for state management
@@ -112,12 +112,15 @@ For now, the project does not rely on any secret keys or external APIs.
 - TypeScript support
 - Home page with featured games carousel, search bar, and filtering options
 - Favorites page to view saved games
+- Featured games page
+- Featured games carsoul in home screen
 - Footer component
 - Navbar component with logo, home/favourites, featured links and mode toggle
 - Breadcrumb in game details
 - GameCard component for displaying individual game info with Hover effects and smooth transitions
 - Play btn redirect to game details page
 - Game details page with game preview and additional information
+- Back btn in game details to redirect to games page
 - Game reviewers section
 - Game rating display
 - Fullscreen mode for game iframe
@@ -137,8 +140,7 @@ For now, the project does not rely on any secret keys or external APIs.
 - Real-time search results
 - Smooth animations and transitions
 - Accessibility considerations (ARIA roles, keyboard navigation)
-- Featured games page
-- Featured games carsoul
+-
 - Similar games section in details page
 
 

@@ -42,18 +42,18 @@ export default function GameCard({ game, isFrameFullHeight }: Props) {
         relative justify-between  group rounded-xl overflow-hidden surface 
         shadow transition-all border border-gray-200 
         hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02]
-        flex flex-col  ${isFrameFullHeight ? "h-full" : "h-48"}
+        flex flex-col  ${isFrameFullHeight ? "h-full" : "h-40"}
       `}
-        style={{ minHeight: 380 }}
+        style={{ minHeight: 350 }}
       >
         {/* Game iframe */}
-        <div className="w-full aspect-video min-h-[180px] bg-gray-100 overflow-hidden">
+        <div className="w-full  bg-gray-100 overflow-hidden">
           <div className="relative group/iframe h-full">
             {isValidUrl ? (
               <iframe
                 src={game.iframeUrl}
                 className={`
-                ${isFrameFullHeight ? "h-full" : "h-48"}
+                ${isFrameFullHeight ? "h-full" : "h-40"}
                 w-full  object-cover pointer-events-none`}
                 title={game.title}
                 allow="fullscreen"

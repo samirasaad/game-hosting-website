@@ -62,16 +62,16 @@ It’s designed to be responsive, accessible, and easy to extend.
 
 2. Install dependencies  
    npm install
-   # or
+    or
    yarn install
-   # or
+    or
    pnpm install
 
 3.  Start development server
     npm run dev
-     # or
+      or
     yarn dev
-     # or
+      or
      pnpm dev
 
 4. Open your browser at http://localhost:3000 to see the website.
